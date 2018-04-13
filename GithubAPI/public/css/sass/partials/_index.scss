@@ -1,0 +1,168 @@
+.page-login {
+	@include size(100%);
+	background: {
+		image: url(../imgs/page-login-bg.jpg);
+		position: center;
+		size: cover;
+	}
+	display: table;
+
+	&__wrapper {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	&__panel {
+		margin: 0 auto;
+		max-width: 300px;
+		padding: 0 15px;
+	}
+
+	&__form {
+
+		.form-control {
+			@include placeholder {
+				color: $c-login-panel-text;
+				text-align: center;
+			}
+			background: {
+				color: $c-form-bg-border;
+			}
+			border: 0;
+			height: 40px;
+		}
+
+		.btn {
+			@include font-size(19);
+			border: {
+				radius: 0;
+				width: 0;
+			}
+			font: {
+				family: map-deep-get($font, "family", "f-heading");
+			}
+			height: 40px;
+			padding: 0;
+			transition: {
+				duration: map-get($time, "t-default");
+				property: background-color;
+				timing-function: ease-in-out;
+			}
+
+			&-success {
+				background: {
+					color: $c-btn-success;
+				}
+
+				&:focus,
+				&:hover {
+					background: {
+						color: darken($c-btn-success, 10%);
+					}
+					outline: 0;
+				}
+			}
+		}
+	}
+
+	&__forgout {
+		margin: {
+			top: 10px;
+		}
+
+		a {
+			@include font-size(11);
+			color: $c-card;
+			display: block;
+			line-height: 1;
+			text-align: center;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__menu {
+		margin: {
+			top: 6px;
+		}
+
+		ul {
+			font: {
+				size: 0;
+			}
+			text-align: center;
+		}
+
+		li {
+			display: inline-block;
+			margin: 0 3px;
+
+			a {
+				@include font-size(11);
+				color: $c-card;
+				display: block;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+
+	.panel {
+		background: {
+			color: transparent;
+		}
+		border: {
+			radius: 0;
+			width: 0;
+		}
+
+		&-heading {
+			background: {
+				color: transparent;
+			}
+			border: {
+				radius: 0;
+				width: 0;
+			}
+			padding: 0;
+		}
+
+		&-logo {
+			margin: {
+				bottom: 22px;
+			}
+
+			img {
+				display: block;
+				margin: 0 auto;
+				max-width: 100%;
+			}
+		}
+
+		&-title {
+			@include font-size(24);
+			background: {
+				color: $c-card;
+			}
+			color: $c-login-panel-text;
+			display: block;
+			font: {
+				family: map-deep-get($font, "family", "f-heading");
+				weight: map-deep-get($font, "weight", "fw-regular");
+			}
+			line-height: 50px;
+			margin: {
+				bottom: 20px;
+			}
+			text-align: center;
+		}
+
+		&-body {
+			padding: 0;
+		}
+	}
+}

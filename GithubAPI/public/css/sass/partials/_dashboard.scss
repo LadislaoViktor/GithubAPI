@@ -1,0 +1,156 @@
+.page-dashboard {
+	background: {
+		color: #292728;
+	}
+	min-height: 100%;
+
+	&__wrapper {
+		background: {
+			color: #f8f8f8;
+		}
+		height: 100%;
+		padding: 30px 15px;
+
+		@include media(">=tablet") {
+			margin: 0 0 0 230px;
+		}
+
+		.page-header {
+			@include font-size(18);
+			background: {
+				color: #b4884e;
+			}
+			color: #ffffff;
+			font: {
+				family: map-deep-get($font, "family", "f-heading");
+				weight: map-deep-get($font, "weight", "fw-regular");
+			}
+			margin: 0;
+			padding: 15px;
+
+			@include media(">=tablet") {
+				@include font-size(24);
+				padding: 15px 15px 20px 30px;
+			}
+		}
+	}
+
+	&__checkbox {
+		margin: {
+			top: 10px;
+		}
+
+		h4 {
+			@include font-size(11);
+			color: #6d6e71;
+			font: {
+				weight: map-deep-get($font, "weight", "fw-medium");
+			}
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	&__form {
+		padding: {
+			top: 30px;
+		}
+
+		input[type="radio"],
+		input[type="checkbox"] {
+			margin: {
+				top: 0;
+			}
+		}
+
+		select,
+		input[type="text"],
+		input[type="email"] {
+			height: 28px;
+			padding: {
+				bottom: 0;
+				top: 0;
+			}
+		}
+
+		select,
+		textarea,
+		input[type="text"],
+		input[type="email"] {
+			@include font-size(11);
+			background: {
+				color: #f8f8f8;
+			}
+			border: {
+				color: #ebebeb;
+				style: solid;
+				width: 3px;
+			}
+			transition: border-color .3s ease-in-out;
+
+			&:focus {
+				border: {
+					color: $c-btn-success;
+				}
+			}
+		}
+
+		label {
+			@include font-size(11);
+			color: #6d6e71;
+			font: {
+				weight: map-deep-get($font, "weight", "fw-medium");
+			}
+		}
+	}
+
+	&__submit {
+		padding: {
+			top: 40px;
+		}
+
+		button {
+			@include font-size(15);
+			border: {
+				radius: 10px;
+			}
+			display: block;
+			font: {
+				family: map-deep-get($font, "family", "f-heading");
+			}
+			height: 32px;
+			padding: 0;
+			transition: {
+				duration: map-get($time, "t-default");
+				property: background-color;
+				timing-function: ease-in-out;
+			}
+			width: 100%;
+
+			&:focus,
+			&:hover {
+				background: {
+					color: darken($c-btn-success, 10%);
+				}
+				outline: 0;
+			}
+
+			@include media(">=tablet") {
+				display: inline-block;
+				width: 110px;
+			}
+		}
+	}
+}
+
+.sidebar {
+
+	@include media(">=tablet") {
+		padding: {
+			top: 60px;
+		}
+		position: absolute;
+		width: 230px;
+		z-index: 2;
+	}
+}

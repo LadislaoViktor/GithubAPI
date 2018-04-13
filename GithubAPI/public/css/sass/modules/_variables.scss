@@ -1,0 +1,47 @@
+// --------------------------------------------------
+// Variables
+// --------------------------------------------------
+
+//darken
+//lighten
+
+//== Colors
+$c-white:			#fff !default;
+$c-black:			#000 !default;
+$c-dark:			#010002 !default;
+
+$c-gold:			#b4884e !default;
+$c-gray-light:		#ebebeb !default;
+$c-blue-lighter:	#b1bfcc !default;
+
+$c-branding:		$c-gold;
+$c-card:			$c-white;
+
+// Button
+//===============================
+$c-btn-success:		$c-branding;
+
+// Form
+//===============================
+$c-form-bg-border:	$c-gray-light;
+
+// Page Login
+//===============================
+$c-login-panel-text: $c-blue-lighter;
+
+//==========================================================================
+// Breakpoints
+//==========================================================================
+
+$breakpoints: (tablet: 768px,
+    desktop: 992px,
+    wide: 1200px) !default;
+
+//==========================================================================
+// Map Times
+//==========================================================================
+$time: (
+	t-fast: 200ms,
+	t-default: 400ms,
+	t-slow: 600ms
+);

@@ -1,0 +1,72 @@
+@font-face {
+	font-family: 'Merriweather-Regular';
+	src: url('../fonts/merriweather/merriweather-regular.eot');
+	src: url('../fonts/merriweather/merriweather-regular.woff2') format('woff2'),
+		url('../fonts/merriweather/merriweather-regular.woff') format('woff'),
+		url('../fonts/merriweather/merriweather-regular.ttf') format('truetype'),
+		url('../fonts/merriweather/merriweather-regular.svg#Merriweather-Regular') format('svg'),
+		url('../fonts/merriweather/merriweather-regular.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Roboto-Light';
+	src: url('../fonts/roboto/roboto-light.eot');
+	src: url('../fonts/roboto/roboto-light.woff2') format('woff2'),
+		url('../fonts/roboto/roboto-light.woff') format('woff'),
+		url('../fonts/roboto/roboto-light.ttf') format('truetype'),
+		url('../fonts/roboto/roboto-light.svg#Roboto-Light') format('svg'),
+		url('../fonts/roboto/roboto-light.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'American-Typewriter';
+	src: url('../fonts/american-typewriter/american-typewriter.eot');
+	src: url('../fonts/american-typewriter/american-typewriter.woff2') format('woff2'),
+		url('../fonts/american-typewriter/american-typewriter.woff') format('woff'),
+		url('../fonts/american-typewriter/american-typewriter.ttf') format('truetype'),
+		url('../fonts/american-typewriter/american-typewriter.svg#American-Typewriter') format('svg'),
+		url('../fonts/american-typewriter/american-typewriter.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// ==========================================================================
+// Typography Variables
+//		weight: map-deep-get($font, "weight", "semibold");
+// ==========================================================================
+//@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+//@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+//@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
+
+$f-default: "Roboto-Light", sans-serif;
+$f-heading: "Merriweather-Regular", sans-serif;
+
+
+$font: (
+	family: (
+		f-default:    $f-default,
+		f-heading:    $f-heading,
+		f-additional: $f-default,
+	),
+	weight: (
+		fw-thin:         100,
+		fw-extralight:   200,
+		fw-light:        300,
+		fw-regular:      400,
+		fw-medium:       500,
+		fw-semibold:     600,
+		fw-bold:         700,
+		fw-extrabold:    800,
+		fw-black:        900,
+	)
+);
+
+$root-em: 16px;
+
+// ==========================================================================
+// Typography Classes
+// ==========================================================================
